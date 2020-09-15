@@ -5,6 +5,7 @@ All URIs are relative to *https://virtserver.swaggerhub.com/joeygiordano13/Cooki
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addContact**](ContactsApi.md#addContact) | **POST** /AddContact.php | Adds a contact to table.
+[**searchByAll**](ContactsApi.md#searchByAll) | **POST** /SearchByAll.php | Searches for contacts with any attribute matching search criterion.
 [**searchContact**](ContactsApi.md#searchContact) | **POST** /SearchContactsByName.php | Searches for contacts with first or last name matching search criterion.
 
 
@@ -40,6 +41,54 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contact_item** | [**\Swagger\Client\Model\AddContact**](../Model/AddContact.md)| Add the contact. | [optional]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **searchByAll**
+> searchByAll($search_item)
+
+Searches for contacts with any attribute matching search criterion.
+
+Searches for a contact(s).
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\Client\Api\ContactsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$search_item = new \Swagger\Client\Model\SearchByAll(); // \Swagger\Client\Model\SearchByAll | Search by all attributes.
+
+try {
+    $apiInstance->searchByAll($search_item);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->searchByAll: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **search_item** | [**\Swagger\Client\Model\SearchByAll**](../Model/SearchByAll.md)| Search by all attributes. | [optional]
 
 ### Return type
 

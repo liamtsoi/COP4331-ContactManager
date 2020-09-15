@@ -79,6 +79,7 @@ All URIs are relative to *https://virtserver.swaggerhub.com/joeygiordano13/Cooki
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ContactsApi* | [**addContact**](docs/Api/ContactsApi.md#addcontact) | **POST** /AddContact.php | Adds a contact to table.
+*ContactsApi* | [**searchByAll**](docs/Api/ContactsApi.md#searchbyall) | **POST** /SearchByAll.php | Searches for contacts with any attribute matching search criterion.
 *ContactsApi* | [**searchContact**](docs/Api/ContactsApi.md#searchcontact) | **POST** /SearchContactsByName.php | Searches for contacts with first or last name matching search criterion.
 *UsersApi* | [**doLogin**](docs/Api/UsersApi.md#dologin) | **POST** /Login.php | Logs in as a user for contact manager.
 
@@ -87,6 +88,7 @@ Class | Method | HTTP request | Description
 
  - [AddContact](docs/Model/AddContact.md)
  - [Login](docs/Model/Login.md)
+ - [SearchByAll](docs/Model/SearchByAll.md)
  - [SearchContactsByName](docs/Model/SearchContactsByName.md)
 
 
